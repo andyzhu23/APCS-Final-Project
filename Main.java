@@ -33,9 +33,17 @@ public class Main {
         return br.readLine().trim();
     }
     //----------------End of Template----------------
+    /*
+    Basic demonstration for the program.
+    It takes input from the in.txt file.
+    
+    The first line of that file contains the number of node n, the number of edges m
+    The following m lines each contain 4 integers U, V, F, W representing an edge, 
+    it means an edge going from U to V have a cost of W per flow and a flowing capacity of F
+    */
     public static void main(String[] args) throws IOException{
         br = new BufferedReader(new FileReader("in.txt"));
-        int n = readInt(), m = readInt(), s = readInt(), t = readInt();
+        int n = readInt(), m = readInt(), s = 1, t = n;
         Graph e = new Graph(n);
         for(int i = 1;i<=m;++i) {
             int u = readInt(), v = readInt(), f = readInt(), w = readInt();
